@@ -67,4 +67,12 @@ struct FlowProvider: PreviewProvider {
     }
 }
 
+//MARK: - Cell size
+
+extension FlowViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize.init(width: view.frame.width, height: 70)
+    }
+}
+
 

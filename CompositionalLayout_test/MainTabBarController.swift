@@ -23,8 +23,8 @@ class MainTabBarController: UITabBarController {
         let compositionalViewController = CompositionalViewController()
         
         viewControllers = [
-            generateNavigationController(rootViewController: flowViewController, title: "Flow", image: convImage),
-            generateNavigationController(rootViewController: compositionalViewController, title: "Compositional", image: peopleImage)
+            generateNavigationController(rootViewController: compositionalViewController, title: "Compositional", image: convImage),
+            generateNavigationController(rootViewController: flowViewController, title: "Flow", image: peopleImage)
         ]
         
     }
