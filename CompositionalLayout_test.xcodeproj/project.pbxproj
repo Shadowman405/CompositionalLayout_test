@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		BF82EAEC275BFBE200EEC576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EAEB275BFBE200EEC576 /* AppDelegate.swift */; };
 		BF82EAEE275BFBE200EEC576 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EAED275BFBE200EEC576 /* SceneDelegate.swift */; };
-		BF82EAF0275BFBE200EEC576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EAEF275BFBE200EEC576 /* ViewController.swift */; };
+		BF82EAF0275BFBE200EEC576 /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EAEF275BFBE200EEC576 /* FlowViewController.swift */; };
 		BF82EAF5275BFBEE00EEC576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF82EAF4275BFBEE00EEC576 /* Assets.xcassets */; };
 		BF82EAF8275BFBEE00EEC576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF82EAF6275BFBEE00EEC576 /* LaunchScreen.storyboard */; };
+		BF82EB00275BFDAC00EEC576 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EAFF275BFDAB00EEC576 /* MainTabBarController.swift */; };
+		BF82EB02275C006300EEC576 /* CompositionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82EB01275C006300EEC576 /* CompositionalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF82EAE8275BFBE200EEC576 /* CompositionalLayout_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayout_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF82EAEB275BFBE200EEC576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF82EAED275BFBE200EEC576 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF82EAEF275BFBE200EEC576 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF82EAEF275BFBE200EEC576 /* FlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
 		BF82EAF4275BFBEE00EEC576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF82EAF7275BFBEE00EEC576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF82EAF9275BFBEE00EEC576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF82EAFF275BFDAB00EEC576 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BF82EB01275C006300EEC576 /* CompositionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				BF82EAEB275BFBE200EEC576 /* AppDelegate.swift */,
 				BF82EAED275BFBE200EEC576 /* SceneDelegate.swift */,
-				BF82EAEF275BFBE200EEC576 /* ViewController.swift */,
+				BF82EAEF275BFBE200EEC576 /* FlowViewController.swift */,
+				BF82EAFF275BFDAB00EEC576 /* MainTabBarController.swift */,
+				BF82EB01275C006300EEC576 /* CompositionalViewController.swift */,
 				BF82EAF4275BFBEE00EEC576 /* Assets.xcassets */,
 				BF82EAF6275BFBEE00EEC576 /* LaunchScreen.storyboard */,
 				BF82EAF9275BFBEE00EEC576 /* Info.plist */,
@@ -133,8 +139,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF82EAF0275BFBE200EEC576 /* ViewController.swift in Sources */,
+				BF82EAF0275BFBE200EEC576 /* FlowViewController.swift in Sources */,
 				BF82EAEC275BFBE200EEC576 /* AppDelegate.swift in Sources */,
+				BF82EB00275BFDAC00EEC576 /* MainTabBarController.swift in Sources */,
+				BF82EB02275C006300EEC576 /* CompositionalViewController.swift in Sources */,
 				BF82EAEE275BFBE200EEC576 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

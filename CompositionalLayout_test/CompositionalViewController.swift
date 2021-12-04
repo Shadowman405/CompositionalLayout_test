@@ -1,19 +1,16 @@
 //
-//  ViewController.swift
+//  CompositionalViewController.swift
 //  CompositionalLayout_test
 //
 //  Created by Maxim Mitin on 4.12.21.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
-
+class CompositionalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .orange
     }
-
-
 }
-
