@@ -13,6 +13,7 @@ class MainTabBarController: UITabBarController {
     let boldConfig = UIImage.SymbolConfiguration(weight: .medium)
     let convImage = UIImage(systemName: "bubble.left.and.bubble.right")!
     let peopleImage = UIImage(systemName: "person.2")!
+    let carImage = UIImage(systemName: "car")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,10 @@ class MainTabBarController: UITabBarController {
         
         let flowViewController = FlowViewController()
         let compositionalViewController = CompositionalViewController()
+        let advancedController = AdvancedLayout()
         
         viewControllers = [
+            generateNavigationController(rootViewController: advancedController, title: "Advanced", image: carImage),
             generateNavigationController(rootViewController: compositionalViewController, title: "Compositional", image: convImage),
             generateNavigationController(rootViewController: flowViewController, title: "Flow", image: peopleImage)
         ]
