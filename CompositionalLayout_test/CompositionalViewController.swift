@@ -20,7 +20,7 @@ class CompositionalViewController: UIViewController {
     }
     
     func setupCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayoutSecond())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .white
         view.addSubview(collectionView)
@@ -34,11 +34,28 @@ class CompositionalViewController: UIViewController {
         //section -> groups -> items -> size
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.2))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+    }
+    
+    private func createLayoutSecond() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 4)
+        let spacing = CGFloat(20)
+        group.interItemSpacing = .fixed(spacing)
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = spacing
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+        
     }
 }
 
