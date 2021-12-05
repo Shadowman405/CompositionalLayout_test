@@ -20,7 +20,7 @@ class CompositionalViewController: UIViewController {
     }
     
     func setupCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .white
         view.addSubview(collectionView)
@@ -29,29 +29,34 @@ class CompositionalViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    private func createLayout() -> UICollectionViewLayout {
+        //section -> groups -> items -> size
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.2))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+    }
 }
 
 //MARK: - Extensions for view
 
 extension CompositionalViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         cell.backgroundColor = .green
+        cell.layer.borderWidth = 1
         return cell
     }
 }
 
-//MARK: - Cell size
-
-extension CompositionalViewController : UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: view.frame.width, height: 70)
-    }
-}
 //MARK: - SwiftUI Canvas
 
 import SwiftUI
