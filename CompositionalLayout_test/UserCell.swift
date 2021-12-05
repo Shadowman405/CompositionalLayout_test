@@ -43,4 +43,3 @@ class UserCell: UICollectionView, SelfConfiguringCell {
         fatalError("init(coder:)")
     }
 }
-
